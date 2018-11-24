@@ -1,5 +1,5 @@
 * {
-    /* includes all except margin in width, height. Way better than default */
+
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -23,7 +23,6 @@ body {
 
 
     height: 100vh;
-    /* avoid ie 10-11 min-height bug */
     display: flex;
     flex-direction: column;
 }
@@ -46,14 +45,12 @@ h2 {
     margin: 3% 0px 3% 0;
 }
 
-/* Setup the header bar nav items using flex to make name left, nav right */
 header {
     background: #ffffff;
     color: #9e9fa4;
     border-bottom: 2px solid #cccccc;
 }
 
-/* To get main content and header (innerFlex) to match, ensure margins are same */
 #innerFlex {
     list-style: none;
     margin: 0px auto 0px auto;
@@ -74,7 +71,6 @@ header {
     color: #9e9fa4;
 }
 
-/* Title has name or title of that page */
 #title {
     padding: 0 30px 0 30px;
     background: #4aaaa5;
@@ -82,7 +78,6 @@ header {
     border: 0px;
 }
 
-/* Nav links right justified */
 .navigation {
     list-style: none;
     margin: 0;
@@ -99,7 +94,7 @@ header {
 
 .line {
     border-right: 1px solid #9e9fa4;
-    /* line 1 pixel width, length of "Some content" */
+
 }
 
 .navigation a {
@@ -120,7 +115,7 @@ header {
     box-shadow: 0 0 8px 8px rgba(176, 224, 238, 1.0);
     border: 1px solid #777777;
     z-index: 2;
-    /* Try to put on top of all other nav items */
+
 }
 
 .navigation a:active {
@@ -134,191 +129,169 @@ header {
     color: #ffffff;
 }
 
-/* ****************************************************************************************
- * the outer container for all page content - i.e. no header or footer
- * and it also allows that background to show arond the main-content of the page
-**************************************************************************************** */
+
 .container {
     margin: 0px auto 0px auto;
     width: 100%;
 
     flex: 1 0 auto;
-    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-}
 
-/* Main Content Text and info */
-/* To get main content and header (innerFlex) to match, ensure margins are same */
-#main-content {
-    background-color: #ffffff;
-    border: 1px solid #dddddd;
-    overflow: auto;
-    padding: 20px;
-    margin: 35px 0px 35px 0px;
-    max-width: 960px;
-}
 
-/* line under name */
-hr {
-    border: 1px solid #dddddd;
-}
 
-#myBio {
-    width: 100%;
-}
+    #main-content {
+        background-color: #ffffff;
+        border: 1px solid #dddddd;
+        overflow: auto;
+        padding: 20px;
+        margin: 35px 0px 35px 0px;
+        max-width: 960px;
+    }
 
-/* The Bio Image */
-#bio-image {
-    width: 275px;
-    height: auto;
-    margin-right: 20px;
-    border: 1px solid #dddddd;
-    /* float to make the text wrap around the image.  This is best use of float */
-    float: left;
-}
 
-#myBio p {
-    letter-spacing: normal;
-    line-height: 2em;
-}
+    hr {
+        border: 1px solid #dddddd;
+    }
 
-/* make sure the form fills the space */
-#contactForm,
-#infoSubmit {
-    width: 100%;
-}
+    #myBio {
+        width: 100%;
+    }
 
-#contactForm p {
-    font-size: 11px;
-    margin: 1em auto .3em auto;
-}
+    #bio-image {
+        width: 275px;
+        height: auto;
+        margin-right: 20px;
+        border: 1px solid #dddddd;
+        float: left;
+    }
 
-/* Give fields small radius for looks */
-/* Small amount of padding to get text to start after radius in field */
-input[type=text],
-textarea {
-    width: 100%;
-    border-radius: 2px;
-    padding-left: 2px;
-    resize: vertical;
-}
+    #myBio p {
+        letter-spacing: normal;
+        line-height: 2em;
+    }
 
-/* highlight the field being worked on */
-input:focus,
-textarea:focus {
-    background: yellow;
-    color: black;
+    #contactForm,
+    #infoSubmit {
+        width: 100%;
+    }
 
-    box-shadow: 0 0 15px 5px #b0e0ee;
-    border: 2px solid #bebede;
-}
+    #contactForm p {
+        font-size: 11px;
+        margin: 1em auto .3em auto;
+    }
 
-/* Make sure text stays in box and scrollbars appear iuf needed*/
-textarea {
-    overflow: auto;
-}
 
-/* fixes weird rederrring on mobile phones */
-input[type=text],
-input[type=submit] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-}
+    input[type=text],
+    textarea {
+        width: 100%;
+        border-radius: 2px;
+        padding-left: 2px;
+        resize: vertical;
+    }
 
-/* Button */
-#submit,
-#reset {
-    border: 0;
-    box-shadow: none;
-    border-radius: 2px;
-    padding: 10px 20px 10px 20px;
-    background: #4aaaa5;
-    color: #ffffff;
-}
+    input:focus,
+    textarea:focus {
+        background: yellow;
+        color: black;
 
-/* When mouse hovers over */
-#submit:hover,
-#reset:hover {
-    background: yellow;
-    color: #777777;
-}
+        box-shadow: 0 0 15px 5px #b0e0ee;
+        border: 2px solid #bebede;
+    }
 
-/* Container for all the portfolio items */
-/* This version is using standrad in-line block */
-/* I will also do a flexbox version */
-#portfolio {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: left;
+    textarea {
+        overflow: auto;
+    }
 
-    flex-flow: wrap;
+    input[type=text],
+    input[type=submit] {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
 
-    padding: 0px 0px 0px 0px;
-    width: 100%;
-}
+    #submit,
+    #reset {
+        border: 0;
+        box-shadow: none;
+        border-radius: 2px;
+        padding: 10px 20px 10px 20px;
+        background: #4aaaa5;
+        color: #ffffff;
+    }
 
-/* Each item has an image and a banner with text */
-.portfolio-item {
-    display: inline-block;
-    position: relative;
-    padding: 0px 40px 40px 0px;
-}
+    #submit:hover,
+    #reset:hover {
+        background: yellow;
+        color: #777777;
+    }
 
-/* Constrain img and put on bottom */
-.portfolio-item img {
-    width: 275px;
-    height: 200px;
-    z-index: 1;
-}
+    #portfolio {
+        display: flex;
+        flex-flow: row;
+        flex-wrap: wrap;
+        justify-content: left;
 
-/* The banner with the text is absolute so it can go on top of image */
-.banner {
-    /* line-height: 60px; */
-    width: 275px;
-    height: auto;
-    padding: 15px 0 15px 0;
-    margin: 0px 0px 0 0;
-    position: absolute;
-    left: 0px;
-    top: auto;
-    bottom: 50px;
-    text-align: center;
+        flex-flow: wrap;
 
-    background-color: #4aaaa5;
-    color: white;
-    z-index: 2;
-}
+        padding: 0px 0px 0px 0px;
+        width: 100%;
+    }
 
-/* This seems to be the best way to veritcally align text inside box  vertical-aign doesnt work */
-span.vCenter {
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-    color: white;
-}
+    .portfolio-item {
+        display: inline-block;
+        position: relative;
+        padding: 0px 40px 40px 0px;
+    }
 
-footer {
-    list-style: none;
-    margin: 0;
-    height: 70px;
 
-    background-color: #666666;
-    color: #cccccc;
-    border-top: 8px solid #4aaaa5;
-    padding-top: 35px;
-    text-align: center;
+    .portfolio-item img {
+        width: 275px;
+        height: 200px;
+        z-index: 1;
+    }
 
-    /* Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-    flex-shrink: 0;
-}
 
-/* clear the floats so the rest of the document flows properly */
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
+    .banner {
+        width: 275px;
+        height: auto;
+        padding: 15px 0 15px 0;
+        margin: 0px 0px 0 0;
+        position: absolute;
+        left: 0px;
+        top: auto;
+        bottom: 50px;
+        text-align: center;
 
-© 2018 GitHub,
-Inc. Terms Privacy Security Status Help Contact GitHub Pricing API Training Blog About
+        background-color: #4aaaa5;
+        color: white;
+        z-index: 2;
+    }
+
+    span.vCenter {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: normal;
+        color: white;
+    }
+
+    footer {
+        list-style: none;
+        margin: 0;
+        height: 70px;
+
+        background-color: #666666;
+        color: #cccccc;
+        border-top: 8px solid #4aaaa5;
+        padding-top: 35px;
+        text-align: center;
+
+        flex-shrink: 0;
+    }
+
+    .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+
+    © 2018 GitHub,
+    Inc. Terms Privacy Security Status Help Contact GitHub Pricing API Training Blog About
