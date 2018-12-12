@@ -277,7 +277,7 @@ footer {
     color: #cccccc;
     border-top: 8px solid #4aaaa5;
     padding-top: 35px;
-    text-align: center;
+    text-align: left;
 
     flex-shrink: 0;
 }
